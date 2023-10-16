@@ -67,7 +67,7 @@ const handleRejected = (state, action) => {
 };
 
 const InitialState = {
-  list: [{ id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' }],
+  list: [],
   isLoading: false,
   error: null,
 };

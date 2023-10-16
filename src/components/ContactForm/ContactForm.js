@@ -7,17 +7,16 @@ import { useState } from 'react';
 export const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
-
   const [state, setState] = useState({
     name: '',
-    phone: '',
+    number: '',
   });
 
   const doesItExist = object => {
     return contacts.list.some(
       contact =>
         contact.name.toLowerCase() === object.name.toLowerCase() ||
-        contact.phone === object.phone
+        contact.number === object.number
     );
   };
 
@@ -30,17 +29,17 @@ export const ContactForm = () => {
     e.preventDefault();
 
     if (doesItExist({ ...state })) {
-      alert(`${name} or ${phone} is already in contacts.`);
+      alert(`${name} or ${number} is already in contacts.`);
     } else {
       dispatch(addContact({ ...state }));
     }
     setState({
       name: '',
-      phone: '',
+      number: '',
     });
   };
 
-  const { name, phone } = state;
+  const { name, number } = state;
   return (
     <Form onSubmit={handleSubmit}>
       <Label>
@@ -59,11 +58,11 @@ export const ContactForm = () => {
         Number
         <input
           type="tel"
-          name="phone"
+          name="number"
           pattern="\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           onChange={handleChange}
-          value={phone}
+          value={number}
           required
         />
       </Label>

@@ -1,3 +1,6 @@
+import { Box } from '@chakra-ui/react';
+import img from '../img/telephone.png';
+
 const styles = {
   container: {
     minHeight: 'calc(100vh - 50px)',
@@ -14,13 +17,18 @@ const styles = {
 
 export default function Home() {
   return (
-    <div style={styles.container}>
+    <Box
+      style={styles.container}
+      bgImage={img}
+      bgPosition="center"
+      bgRepeat="no-repeat"
+    >
       <h1 style={styles.title}>
-        Task manager welcome page{' '}
+        Welcome, register on our site and save your contacts{' '}
         <span role="img" aria-label="Greeting icon">
           💁‍♀️
         </span>
       </h1>
-    </div>
+    </Box>
   );
 }

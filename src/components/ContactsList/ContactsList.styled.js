@@ -10,9 +10,13 @@ export const Contact = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
+  font-weight: bold;
+  border: 1px solid #a2b4fb;
+  padding: 8px;
+  border-radius: 4px;
 `;
 export const ListItem = styled.li`
-  font-size: 18px;
+  font-size: 1em;
   font-weight: bold;
 `;
 
@@ -23,10 +27,20 @@ export const Button = styled.button`
   align-items: center;
   font-size: 0.8em;
   border-radius: 4px;
-  border: 1px solid black;
+  border: 1px solid #a2b4fb;
+  margin-left: auto;
+  padding: 10px;
 
   &:hover {
-    background-color: #a580d5;
+    background-color: #a2b4fb;
     color: white;
   }
+`;
+
+export const Title = styled.h2`
+  font-weight: bold;
+`;
+export const Contacts = styled.div`
+  display: flex;
+  margin-top: 20px;
 `;

@@ -15,7 +15,7 @@ export const AppBar = () => {
       h="65"
       p={4}
       color="black"
-      bgGradient="linear(to-r, #a2b4fb, yellow.100)"
+      bgGradient="linear(to-r, brand.900, brand.800)"
     >
       <header className={css.header}>
         <Navigation />

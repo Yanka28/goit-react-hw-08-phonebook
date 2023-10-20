@@ -21,11 +21,11 @@ export const MessageError = ({ isVisible, handleClose }) => {
           br="4px"
         >
           <AlertIcon />
-          {/* <AlertTitle mr={2}>Error!</AlertTitle> */}
+          <AlertTitle mr={2}>Error!</AlertTitle>
           <AlertDescription>
             Oops... such user does not exist or the password is incorrect
           </AlertDescription>
-          <Button onClick={handleClose} color="red.200">
+          <Button onClick={handleClose} color="red.200" mr="auto">
             Close
           </Button>
         </Alert>

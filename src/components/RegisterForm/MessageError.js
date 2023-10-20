@@ -5,6 +5,8 @@ import {
   AlertIcon,
   AlertDescription,
   AlertTitle,
+  Center,
+  Button,
 } from '@chakra-ui/react';
 
 export const MessageError = ({ isVisible, handleClose }) => {
@@ -14,16 +16,26 @@ export const MessageError = ({ isVisible, handleClose }) => {
   console.log('IsLoggedIn', isLoggedIn);
 
   return (
-    <>
+    <Center h="5vh">
       {' '}
       {isVisible && (
-        <Alert status="error" color="white">
+        <Alert
+          borderRadius="md"
+          status="error"
+          bg="red.200"
+          color="white"
+          width="20%"
+          height="65px"
+          br="4px"
+        >
           <AlertIcon />
           <AlertTitle mr={2}>Error!</AlertTitle>
           <AlertDescription>Oops...do it again</AlertDescription>
-          <button onClick={handleClose}>Close</button>
+          <Button onClick={handleClose} color="red.200" mr="auto">
+            Close
+          </Button>
         </Alert>
       )}
-    </>
+    </Center>
   );
 };

@@ -19,21 +19,17 @@ export const Form = () => {
 
   return (
     <form onSubmit={handleSubmit} autoComplete="off">
-      <FormControl>
-        <FormLabel>
-          Email
-          <Input type="email" name="email" autoComplete="email" />
-        </FormLabel>
+      <FormControl isRequired>
+        <FormLabel>Email </FormLabel>
+        <Input type="email" name="email" autoComplete="email" />
       </FormControl>
-      <FormControl>
-        <FormLabel>
-          Password
-          <Input
-            type="password"
-            name="password"
-            autoComplete="current-password"
-          />
-        </FormLabel>
+      <FormControl isRequired>
+        <FormLabel>Password </FormLabel>
+        <Input
+          type="password"
+          name="password"
+          autoComplete="current-password"
+        />
       </FormControl>
       <Button type="submit" bgGradient="linear(to-r,  #a2b4fb, yellow.100)">
         Log In

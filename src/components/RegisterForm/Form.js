@@ -39,7 +39,7 @@ export const Form = ({ setIsVisible }) => {
         </FormControl>
         <Button
           type="submit"
-          bgGradient="linear(to-r,  #a2b4fb, yellow.100)"
+          bgGradient="linear(to-r, #a2b4fb, yellow.100)"
           marginTop="10px"
         >
           Register

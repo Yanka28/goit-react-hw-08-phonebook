@@ -2,10 +2,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contacts/operations';
 import { selectContacts } from 'redux/contacts/selectors';
 import { Form } from './ContactForm.styled';
+// import toast from 'react-hot-toast';
+import { useToast } from '@chakra-ui/react';
 import { useState } from 'react';
 import { FormControl, FormLabel, Input, Button } from '@chakra-ui/react';
 
 export const ContactForm = () => {
+  const toast = useToast({ position: 'top' });
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
   const [state, setState] = useState({
@@ -30,7 +33,11 @@ export const ContactForm = () => {
     e.preventDefault();
 
     if (doesItExist({ ...state })) {
-      alert(`${name} or ${number} is already in contacts.`);
+      toast({
+        title: `${name} or ${number} is already in contacts.`,
+        status: 'warning',
+        isClosable: true,
+      });
     } else {
       dispatch(addContact({ ...state }));
     }

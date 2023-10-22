@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
-// import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from 'components/App';
 import { BrowserRouter } from 'react-router-dom';
@@ -15,8 +14,6 @@ const colors = {
   brand: {
     900: '#a2b4fb',
     800: '#fefcbf',
-    // 700: '#2a69ac',
-    // #a2b4fb, #fefcbf
   },
 };
 
